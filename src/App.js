@@ -3,9 +3,10 @@ import {
   Routes,
   useNavigate,
 } from "react-router-dom";
-import GameMenu from "./components/GameMenu";
 import CreateGame from "./components/CreateGame.js";
 import JoinGame from "./components/JoinGame.js"
+import GameMenu from "./components/GameMenu.js"
+import GameScreen from "./components/GameScreen.js"
 import socket from "./socketConfig.js";
 import { useEffect, useState } from "react";
 
@@ -23,7 +24,7 @@ function App() {
       setGameState(game);
     });
     return () => {
-      socket.removeAllListeners();
+      socket.removeAllListeners('updateGame');
     }
   }, []);
   useEffect(() => {
@@ -36,6 +37,7 @@ function App() {
         <Route exact path="/" element={<GameMenu/>} />
         <Route path="/game/create" element={<CreateGame/>}/>
         <Route path="game/join" element={<JoinGame/>}/>
+        <Route path="game/:gameId" element={<GameScreen/>}/>
       </Routes>
   );
 }

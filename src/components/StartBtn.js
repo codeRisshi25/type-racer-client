@@ -3,11 +3,10 @@ import socket from "../socketConfig.js";
 
 const StartBtn = ({ player, gameID }) => {
   const [showBtn, setShowBtn] = useState(true);
-  console.log(player);
   const { isPartyLeader } = player;
 
   const onClickHandler = () => {
-    socket.emit("timer", { player, gameID });
+    socket.emit("timer", { playerID: player._id, gameID });
     setShowBtn(false);
   }
     return isPartyLeader && showBtn ? (

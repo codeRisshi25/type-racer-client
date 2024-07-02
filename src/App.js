@@ -1,14 +1,10 @@
-import {
-  Route,
-  Routes,
-  useNavigate,
-} from "react-router-dom";
+import { Route, Routes, useNavigate } from "react-router-dom";
 import CreateGame from "./components/CreateGame.js";
-import JoinGame from "./components/JoinGame.js"
-import GameMenu from "./components/GameMenu.js"
-import GameScreen from "./components/GameScreen.js"
+import JoinGame from "./components/JoinGame.js";
+import GameMenu from "./components/GameMenu.js";
 import socket from "./socketConfig.js";
 import { useEffect, useState } from "react";
+import TypeRacer from "./components/TypeRacer.js";
 
 function App() {
   let navigate = useNavigate();
@@ -24,21 +20,24 @@ function App() {
       setGameState(game);
     });
     return () => {
-      socket.removeAllListeners('updateGame');
-    }
+      socket.removeAllListeners("updateGame");
+    };
   }, []);
   useEffect(() => {
     if (gameState._id !== "") {
       navigate(`/game/${gameState._id}`);
     }
-  }, [gameState._id,navigate]);
+  }, [gameState._id, navigate]);
   return (
-      <Routes>
-        <Route exact path="/" element={<GameMenu/>} />
-        <Route path="/game/create" element={<CreateGame/>}/>
-        <Route path="game/join" element={<JoinGame/>}/>
-        <Route path="game/:gameId" element={<GameScreen/>}/>
-      </Routes>
+    <Routes>
+      <Route exact path="/" element={<GameMenu />} />
+      <Route path="/game/create" element={<CreateGame />} />
+      <Route path="/game/join" element={<JoinGame />} />
+      <Route
+        path="/game/:gameId"
+        element={<TypeRacer gameState={gameState} />}
+      />
+    </Routes>
   );
 }
 

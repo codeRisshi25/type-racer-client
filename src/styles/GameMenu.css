@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
+
+html,body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Roboto mono;
+  background-image: url("../assests/bg-image.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+.heading-text {
+  color: #fff;
+
+  text-align: center;
+  font-family: "Roboto Mono";
+  font-size: 1.75rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.blur-screen {
+  margin-top: 0;
+  background: rgba(28, 41, 47, 0.64);
+  backdrop-filter: blur(7.5px);
+  height: 100vh;
+}
+ 
+.nav-bg {
+  position: relative;
+  top: 1rem;
+  margin: 0rem 1rem;
+  border-radius: 0.8125rem;
+  background: rgba(31, 57, 64, 0.68);
+  box-shadow: 0px 2px 4px 0px rgba(243, 243, 243, 0);
+}

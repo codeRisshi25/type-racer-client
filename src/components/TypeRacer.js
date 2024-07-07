@@ -4,6 +4,7 @@ import CountDown from "./CountDown.js";
 import { useNavigate } from "react-router-dom";
 import StartBtn from "./StartBtn.js";
 import socket from "../socketConfig.js";
+import DisplayWords from './DisplayWords.js';
 
 const findPlayer = (players) => {
   return players.find((player) => player.socketID === socket.id);
@@ -11,7 +12,7 @@ const findPlayer = (players) => {
 
 const TypeRacer = ({ gameState }) => {
   const navigate = useNavigate(); // Initialize useNavigate
-  const { _id, players } = gameState;
+  const { _id, players , words} = gameState;
   const player = findPlayer(players);
   console.log(player);
 
@@ -23,6 +24,7 @@ const TypeRacer = ({ gameState }) => {
 
   return (
     <div>
+      <DsiplayWords words={words} player={player} />
       <CountDown />
       <StartBtn player={player} gameID={_id} />
     </div>

@@ -7,7 +7,7 @@ const typedCurrentlyStyle = {
 }
 
 const currentStyle = {
-    color: "black",
+    color: "red",
     fontSize: "1.5rem",
     fontWeight: "bold"
 }

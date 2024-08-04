@@ -90,7 +90,7 @@ const GameMenu = (props) => {
               </div>
             </div>
             <div className="nav-mid"></div>
-            <p className="sub-heading-text">@codeRsshi25</p>
+            <p className="sub-heading-text">@codeRisshi25</p>
           </nav>
         </div>
         <div className="body-content">

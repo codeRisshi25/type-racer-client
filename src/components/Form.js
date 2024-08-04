@@ -2,7 +2,6 @@ import React, { useState, useEffect, useRef } from "react";
 import socket from "../socketConfig.js";
 
 const Form = ({isOpen, isOver, player, gameID}) => {
-  console.log(gameID);
   const [userInput, setUserInput] = useState("");
   const textInput = useRef(null);
 

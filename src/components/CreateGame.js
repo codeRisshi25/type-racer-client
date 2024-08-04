@@ -1,5 +1,7 @@
 import React, { useState } from "react";
+import NavBar from "./NavBar";
 import socket from "../socketConfig";
+import "../styles/GameLobby.css";
 
 const CreateGame = (props) => {
   const [nickName, setNickName] = useState("");
@@ -14,29 +16,32 @@ const CreateGame = (props) => {
   };
 
   return (
-    <div className="row">
-      <div className="col-sm"></div>
-      <div className="col-sm-8">
-        <h1 className="text-center">Create Game</h1>
-        <form onSubmit={onSubmit}>
-          <div className="form-group">
-            <label htmlFor="nickName">Enter Nick Name</label>
-            <input
-              type="text"
-              name="nickName"
-              value={nickName}
-              onChange={onChange}
-              placeholder="Enter Nick Name"
-              className="form-control"
-            />
+    <>
+      <div className="blur-screen">
+        <NavBar />
+        <div className="wrapper-main">
+          <div className="form-wrapper">
+            <h1 className="join-game">create game</h1>
+            <form onSubmit={onSubmit}>
+              <div className="form-group">
+                <label htmlFor="nickName">Enter Nick Name</label>
+                <input
+                  type="text"
+                  name="nickName"
+                  value={nickName}
+                  onChange={onChange}
+                  placeholder="Nick Name"
+                  className="form-control"
+                />
+              </div>
+              <button type="submit" className="btn btn-primary">
+                Submit
+              </button>
+            </form>
           </div>
-          <button type="submit" className="btn btn-primary">
-            Submit
-          </button>
-        </form>
+        </div>
       </div>
-      <div className="col-sm"></div>
-    </div>
+    </>
   );
 };
 export default CreateGame;

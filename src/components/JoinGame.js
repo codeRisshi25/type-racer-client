@@ -1,5 +1,7 @@
 import React, { useState } from "react";
+import NavBar from "./NavBar";
 import socket from "../socketConfig";
+import "../styles/GameLobby.css"
 
 const JoinGame = (props) => {
   const [userInput, setuserInput] = useState({ gameID: "", nickName: "" });
@@ -10,43 +12,46 @@ const JoinGame = (props) => {
 
   const onSubmit = (e) => {
     e.preventDefault();
-    console.log(userInput)
+    console.log(userInput);
     socket.emit("join-game", userInput);
   };
 
   return (
-    <div className="row">
-      <div className="col-sm"></div>
-      <div className="col-sm-8">
-        <h1 className="text-center">Join Game</h1>
-        <form onSubmit={onSubmit}>
-          <div className="form-group">
-            <label htmlFor="gameID">Enter Game ID</label>
-            <input
-              type="text"
-              name="gameID"
-              value={userInput.gameID}
-              onChange={onChange}
-              placeholder="Enter GameID"
-              className="form-control"
-            />
-            <label htmlFor="nickName">Enter Nick Name</label>
-            <input
-              type="text"
-              name="nickName"
-              value={userInput.nickName}
-              onChange={onChange}
-              placeholder="Enter Nick Name"
-              className="form-control"
-            />
+    <>
+      <div className="blur-screen">
+        <NavBar />
+        <div className="wrapper-main">
+          <div className="form-wrapper">
+            <h1 className="join-game">join game</h1>
+            <form onSubmit={onSubmit}>
+              <div className="form-group">
+                <label htmlFor="gameID">Enter Game ID</label>
+                <input
+                  type="text"
+                  name="gameID"
+                  value={userInput.gameID}
+                  onChange={onChange}
+                  placeholder="GameID"
+                  className="form-control"
+                />
+                <label htmlFor="nickName">Enter Nick Name</label>
+                <input
+                  type="text"
+                  name="nickName"
+                  value={userInput.nickName}
+                  onChange={onChange}
+                  placeholder="Nick Name"
+                  className="form-control"
+                />
+              </div>
+              <button type="submit" className="btn btn-primary">
+                Submit
+              </button>
+            </form>
           </div>
-          <button type="submit" className="btn btn-primary">
-            Submit
-          </button>
-        </form>
+        </div>
       </div>
-      <div className="col-sm"></div>
-    </div>
+    </>
   );
 };
 export default JoinGame;

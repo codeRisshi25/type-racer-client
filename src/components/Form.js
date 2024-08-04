@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import socket from "../socketConfig.js";
 
-const Form = ({isOpen, isOver, player, gameID}) => {
+const Form = ({isOpen, isOver, gameID}) => {
   const [userInput, setUserInput] = useState("");
   const textInput = useRef(null);
 
@@ -31,6 +31,7 @@ const Form = ({isOpen, isOver, player, gameID}) => {
         <div className="form-group">
           <input
             type="text"
+            readOnly={isOver || isOpen}
             onChange={onChange}
             value={userInput}
             className="form-control"

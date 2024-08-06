@@ -9,6 +9,7 @@ import Form from './Form.js';
 import ProgressBar from "./ProgressBar"
 import ScoreBoard from "./ScoreBoard";
 import NavBar from "./NavBar.js"
+import CopyCode from "./CopyCode.js"
 
 const findPlayer = (players) => {
   return players.find((player) => player.socketID === socket.id);
@@ -32,6 +33,7 @@ const TypeRacer = ({ gameState }) => {
       <Form isOpen={isOpen} isOver={isOver} player={player} gameID={_id} />
       <CountDown />
       <StartBtn player={player} gameID={_id} />
+      <CopyCode player={player} gameID={_id} isOpen={isOpen} />
       <ScoreBoard players={players}/>
     </div>
     </div>

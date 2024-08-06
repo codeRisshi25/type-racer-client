@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import NavBar from "./NavBar";
+import Loader from "./Loader";
 import socket from "../socketConfig";
 import "../styles/GameLobby.css";
 
 const CreateGame = (props) => {
   const [nickName, setNickName] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const onChange = (e) => {
     setNickName(e.target.value);
@@ -12,6 +14,7 @@ const CreateGame = (props) => {
 
   const onSubmit = (e) => {
     e.preventDefault();
+    setLoading(true);
     socket.emit("create-game", nickName);
   };
 
@@ -34,9 +37,12 @@ const CreateGame = (props) => {
                   className="form-control"
                 />
               </div>
+              {loading ? (
+              <Loader /> // Render loader if loading is true
+            ) : (
               <button type="submit" className="btn btn-primary">
                 Submit
-              </button>
+              </button>)}
             </form>
           </div>
         </div>

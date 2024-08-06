@@ -8,6 +8,7 @@ import DisplayWords from './DisplayWords.js';
 import Form from './Form.js';
 import ProgressBar from "./ProgressBar"
 import ScoreBoard from "./ScoreBoard";
+import NavBar from "./NavBar.js"
 
 const findPlayer = (players) => {
   return players.find((player) => player.socketID === socket.id);
@@ -24,12 +25,15 @@ const TypeRacer = ({ gameState }) => {
   }, [_id, navigate]);
   return (
     <div>
+      <div className="blur-screen">
+      <NavBar/>
       <DisplayWords words={words} player={player} />
       <ProgressBar players={players} player={player} wordsLength={words.length}/>
       <Form isOpen={isOpen} isOver={isOver} player={player} gameID={_id} />
       <CountDown />
       <StartBtn player={player} gameID={_id} />
       <ScoreBoard players={players}/>
+    </div>
     </div>
   );
 };

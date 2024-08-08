@@ -1,0 +1,13 @@
+.words-display{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 60px;
+    height: 30vh;
+    background: rgba(31, 57, 64, 0.68);
+    box-shadow: 0px 2px 4px 0px rgba(243, 243, 243, 0);
+    width: 300px; /* Set the desired fixed width */
+    margin: 5rem auto; /* Center the card horizontally */
+    border-radius: 0.5rem;
+}

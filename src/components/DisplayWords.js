@@ -1,5 +1,22 @@
 import React from 'react';
 
+const displayWordsStyle = {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center',
+    padding: '10px 60px',
+    height: '30vh',
+    background: 'rgba(31, 57, 64, 0.68)',
+    boxShadow: '0px 2px 4px 0px rgba(243, 243, 243, 0)',
+    width: '500px', /* Set the desired fixed width */
+    margin: '5rem auto', /* Center the card horizontally */
+    borderRadius: '0.5rem',
+    textAlign: 'center',
+    transform: 'scale(0.8)', /* Make the words smaller */
+    transformOrigin: 'center'
+};
+
 const typedCurrentlyStyle = {
     color: "green",
     fontSize: "1.5rem",
@@ -7,11 +24,15 @@ const typedCurrentlyStyle = {
 }
 
 const currentStyle = {
+    color: "white",
+    fontSize: "1.5rem",
+    fontWeight: "bold"
+}
+const wordsToBeTypedStyle = {
     color: "grey",
     fontSize: "1.5rem",
     fontWeight: "bold"
 }
-
 const getTypedWords = (words, player) => {
     let typedWords = words.slice(0,player.currentWordIndex);
     typedWords = typedWords.join(" ");
@@ -23,15 +44,17 @@ const getCurrentWord = (words, player) => {
 const getWordsToBeTyped = (words, player) => {
     let wordsToBeTyped = words.slice(player.currentWordIndex+1,words.length);
     wordsToBeTyped = wordsToBeTyped.join(" ");
-    return <span> {wordsToBeTyped}</span>
+    return <span style={wordsToBeTypedStyle}> {wordsToBeTyped}</span>
 }
 
 const DisplayWords = ({ words, player }) => {
     return (
         <>
+        <div style={displayWordsStyle}>
         {getTypedWords(words,player)}
         {getCurrentWord(words,player)}
         {getWordsToBeTyped(words,player)}
+        </div>
         </>
     )
 }

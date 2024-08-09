@@ -11,3 +11,54 @@
     margin: 5rem auto; /* Center the card horizontally */
     border-radius: 0.5rem;
 }
+.score-table {
+    width: 60%;
+    border-collapse: collapse;
+    margin: 20px auto;
+    font-size: 1vw;
+    text-align: left;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.score-table thead {
+    background: rgba(31, 57, 64, 0.68);
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+
+.score-table th, 
+.score-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #dddddd;
+}
+
+.score-table tbody tr {
+    color: black;
+    background-color: #f3f3f3;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.score-table tbody tr:nth-of-type(even) {
+    background-color: #c0c0c0e1;
+}
+
+.score-table tbody tr:hover {
+    background-color: rgba(31, 57, 64, 0.68);
+    color: white;
+}
+
+.score-table th {
+    font-weight: bold;
+    text-align: center;
+}
+
+.score-table th[scope='row'] {
+    font-weight: normal;
+    text-align: center;
+}
+
+.score-table td {
+    text-align: center;
+}

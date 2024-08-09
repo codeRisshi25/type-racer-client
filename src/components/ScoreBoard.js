@@ -1,4 +1,5 @@
 import React from 'react';
+import '../styles/general.css';
 
 const getScoreBoard = (players) => {
     const scoreBoard = players.filter(player => player.WPM !== -1);
@@ -13,9 +14,9 @@ const ScoreBoard = ({players})=> {
         <table className="score-table">
             <thead>
                 <tr>
-                    <th scopre="col">#</th>
-                    <th scopre="col">User</th>
-                    <th scopre="col">WPM</th>
+                    <th scope="col">#</th>
+                    <th scope="col">User</th>
+                    <th scope="col">WPM</th>
                 </tr>
             </thead>
             <tbody>

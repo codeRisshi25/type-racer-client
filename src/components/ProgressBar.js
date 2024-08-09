@@ -15,33 +15,38 @@ const ProgressBar = ({ player, players, wordsLength }) => {
     <div>
       {
         <>
-          <h5>{player.nickName}</h5>
-          <div className="progress" key={player._id}>
-            <div
-              className="progress-bar"
-              role="progressbar"
-              style={{ width: percentage }}
-            >
-              {percentage}
+          <div className="prog-wrap">
+            <h5 className="player-nickname">{player.nickName}</h5>
+            <div className="progress" key={player._id}>
+              <div
+                className="progress-bar"
+                role="progressbar"
+                style={{ width: percentage }}
+              >
+                {percentage}
+              </div>
             </div>
           </div>
         </>
       }
       {players.map((playerObj) => {
-        const percentage = calculatePercentage(playerObj,wordsLength);
-        return playerObj._id !== player._id ? 
-            <>
-                <h5>{playerObj.nickName}</h5>
-                <div className="progress" key={playerObj._id}>
+        const percentage = calculatePercentage(playerObj, wordsLength);
+        return playerObj._id !== player._id ? (
+          <>
+            <div className="prog-wrap">
+              <h5 className="player-nickname">{playerObj.nickName}</h5>
+              <div className="progress" key={playerObj._id}>
                 <div
-                    className="progress-bar"
-                    role="progressbar"
-                    style={{ width: percentage }}
+                  className="progress-bar"
+                  role="progressbar"
+                  style={{ width: percentage }}
                 >
-                    {percentage}
+                  {percentage}
                 </div>
-                </div>
-            </> : null
+              </div>
+            </div>
+          </>
+        ) : null;
       })}
     </div>
   );

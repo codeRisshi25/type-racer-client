@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import socket from "../socketConfig.js";
+import "../styles/general.css"
 
 const Form = ({isOpen, isOver, gameID}) => {
   const [userInput, setUserInput] = useState("");
@@ -31,11 +32,12 @@ const Form = ({isOpen, isOver, gameID}) => {
         <div className="form-group">
           <input
             type="text"
-            readOnly={isOpen || isOver}
+            // readOnly={isOpen || isOver}
             onChange={onChange}
             value={userInput}
-            className="form-control"
+            className="words-form"
             ref={textInput}
+            placeholder="type here..."
           />
         </div>
       </form>

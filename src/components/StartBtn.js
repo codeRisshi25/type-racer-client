@@ -11,7 +11,9 @@ const StartBtn = ({ player, gameID }) => {
     setShowBtn(false);
   }
     return isPartyLeader && showBtn ? (
+      <div className="startBtn-wrapper">
       <button className="startBtn" onClick={onClickHandler}>Start Game</button>
+      </div>
     ) : null;
 };
 export default StartBtn;

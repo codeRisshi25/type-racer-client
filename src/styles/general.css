@@ -2,7 +2,7 @@
   width: 60%;
   border-collapse: collapse;
   margin: 20px auto;
-  font-size: 1vw;
+  font-size: 1rem;
   text-align: left;
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
@@ -79,8 +79,8 @@
 }
 
 .countDown {
-  font-size: 2rem;
-  color: white;
+  font-size: 1.5rem;
+  color: rgb(255, 255, 255);
   margin: 1rem auto;
   text-align: center;
   text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
@@ -102,4 +102,16 @@
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  display: block; /* Make the button a block element */
+  margin: 0 auto; /* Center the button horizontally */
+}
+
+/* Parent container styles to center the button vertically and horizontally */
+.startBtn-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.startBtn:hover {
+  background-color: #4CAF50;
 }

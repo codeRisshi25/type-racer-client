@@ -13,18 +13,18 @@ const displayWordsStyle = {
 
 const typedCurrentlyStyle = {
     color: "green",
-    fontSize: "1.2rem",
+    fontSize: "1.4rem",
     fontWeight: "bold"
 }
 
 const currentStyle = {
     color: "white",
-    fontSize: "1.3rem",
+    fontSize: "1.45rem",
     fontWeight: "bold"
 }
 const wordsToBeTypedStyle = {
     color: "grey",
-    fontSize: "1.2rem",
+    fontSize: "1.4rem",
     fontWeight: "bold"
 }
 const getTypedWords = (words, player) => {

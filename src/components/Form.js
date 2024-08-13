@@ -32,7 +32,7 @@ const Form = ({isOpen, isOver, gameID}) => {
         <div className="form-group">
           <input
             type="text"
-            // readOnly={isOpen || isOver}
+            readOnly={isOpen || isOver}
             onChange={onChange}
             value={userInput}
             className="words-form"

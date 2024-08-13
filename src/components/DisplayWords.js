@@ -1,11 +1,11 @@
 import React from 'react';
 
 const displayWordsStyle = {
-    width: '90%',
+    width: '95%',
     padding: '1rem',
     background: 'rgba(31, 57, 64, 0.68)',
     boxShadow: '0px 2px 4px 0px rgba(243, 243, 243, 0)', /* Set the desired fixed width */
-    margin: '3rem auto', /* Center the card horizontally */
+    margin: '1.35rem auto', /* Center the card horizontally */
     borderRadius: '0.5rem',
     textAlign: 'justified',
     transformOrigin: 'center',

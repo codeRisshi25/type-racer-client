@@ -1,5 +1,6 @@
 import React , { useState, useEffect } from "react";
 import socket from "../socketConfig.js";
+import "../styles/general.css";
 
 const CountDown = props =>{
     const [timer, setTimer] = useState({countDown : "",msg: ""});
@@ -14,8 +15,7 @@ const CountDown = props =>{
     const {countDown, msg} = timer;
     return (
         <div>
-            <h1>{countDown}</h1>
-            <h3> {msg}</h3>
+            <h3 className="countDown">{countDown}</h3>
         </div>
     );
 }

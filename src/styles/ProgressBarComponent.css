@@ -4,6 +4,9 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.24);
+    border-radius: 5px;
+    margin: 10px 2rem;
 }
 .progress {
     width: 100%;
@@ -18,7 +21,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 1.65rem;
+    height: 1.2rem;
     background-color: rgba(0, 157, 0, 0.845);
     text-align: center;
     color: white;
@@ -26,7 +29,7 @@
     transition: width 0.2s ease;
 }
 .player-nickname {
-    color: #e0e0e0a7;
-    font-size: 1.5rem;
+    color: #e0e0e0e0;
+    font-size: 1.2rem;
     margin: 0 2rem;
 }

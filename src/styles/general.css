@@ -1,93 +1,105 @@
-.words-display{
-    font-family: "Roboto-mono";
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 10px 60px;
-    height: 30vh;
-    background: rgba(31, 57, 64, 0.68);
-    box-shadow: 0px 2px 4px 0px rgba(243, 243, 243, 0);
-    width: 300px; /* Set the desired fixed width */
-    margin: 5rem auto; /* Center the card horizontally */
-    border-radius: 0.5rem;
-}
 .score-table {
-    width: 60%;
-    border-collapse: collapse;
-    margin: 20px auto;
-    font-size: 1vw;
-    text-align: left;
-    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
+  width: 60%;
+  border-collapse: collapse;
+  margin: 20px auto;
+  font-size: 1vw;
+  text-align: left;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
 }
 
 .score-table thead {
-    background: rgba(31, 57, 64, 0.68);
-    color: white;
-    text-transform: uppercase;
-    letter-spacing: 0.03em;
+  background: rgba(31, 57, 64, 0.68);
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
 }
 
-.score-table th, 
+.score-table th,
 .score-table td {
-    padding: 12px 15px;
-    border-bottom: 1px solid #dddddd;
+  padding: 12px 15px;
+  border-bottom: 1px solid #dddddd;
 }
 
 .score-table tbody tr {
-    color: black;
-    background-color: #f3f3f3;
-    transition: background-color 0.2s ease-in-out;
+  color: black;
+  background-color: #f3f3f3;
+  transition: background-color 0.2s ease-in-out;
 }
 
 .score-table tbody tr:nth-of-type(even) {
-    background-color: #c0c0c0e1;
+  background-color: #c0c0c0e1;
 }
 
 .score-table tbody tr:hover {
-    background-color: rgba(31, 57, 64, 0.68);
-    color: white;
+  background-color: rgba(31, 57, 64, 0.68);
+  color: white;
 }
 
 .score-table th {
-    font-weight: bold;
-    text-align: center;
+  font-weight: bold;
+  text-align: center;
 }
 
-.score-table th[scope='row'] {
-    font-weight: normal;
-    text-align: center;
+.score-table th[scope="row"] {
+  font-weight: normal;
+  text-align: center;
 }
 
 .score-table td {
-    text-align: center;
+  text-align: center;
 }
 
 /* form group styles */
-.text-here{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+.text-here {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
-.words-form{
-    color: white;
-    font-size: 1.3rem;
-    width: 70vw;
-    height: 2rem;
-    margin: 0.5rem auto;
-    text-align: center;
-    border: none;
-    background-color: #dddddd63;
-    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
-    box-shadow: 0px 0px 8px 2px rgba(31, 57, 64, 0.68);
+.words-form {
+  color: white;
+  font-size: 1.3rem;
+  width: 70vw;
+  height: 2rem;
+  margin: 0.5rem auto;
+  text-align: center;
+  border: none;
+  background-color: #dddddd63;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  box-shadow: 0px 0px 8px 2px rgba(31, 57, 64, 0.68);
 }
-.words-form:focus{
-    outline: none;
+.words-form:focus {
+  outline: none;
 }
-.words-form::placeholder{
-    color: rgba(255, 255, 255, 0.483);
-    text-align: center;
+.words-form::placeholder {
+  color: rgba(255, 255, 255, 0.483);
+  text-align: center;
+}
+
+.countDown {
+  font-size: 2rem;
+  color: white;
+  margin: 1rem auto;
+  text-align: center;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+  animation: glow 1s ease-in-out infinite alternate;
+
+  @keyframes glow {
+    from {
+      text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+    }
+    to {
+      text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+    }
+  }
+}
+.startBtn {
+  background-color: green;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }

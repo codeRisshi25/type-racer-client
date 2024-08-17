@@ -1,6 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import NavBar from "./NavBar";
+import Footer from "./Footer";
 import "../styles/GameMenu.css";
 
 
@@ -46,6 +47,7 @@ const GameMenu = (props) => {
                 fast-paced fun!"
               </p>
           </div>
+        <Footer/>
         </div>
       </div>
     </div>

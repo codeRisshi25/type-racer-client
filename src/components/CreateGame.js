@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import NavBar from "./NavBar";
 import Loader from "./Loader";
+import Footer from "./Footer";
 import socket from "../socketConfig";
 import "../styles/GameLobby.css";
 
@@ -45,6 +46,7 @@ const CreateGame = (props) => {
               </button>)}
             </form>
           </div>
+          <Footer />
         </div>
       </div>
     </>

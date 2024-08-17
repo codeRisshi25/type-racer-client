@@ -9,6 +9,7 @@ import Form from './Form.js';
 import ProgressBar from "./ProgressBar"
 import ScoreBoard from "./ScoreBoard";
 import NavBar from "./NavBar.js"
+import Footer from "./Footer";
 import CopyCode from "./CopyCode.js"
 
 const findPlayer = (players) => {
@@ -35,6 +36,7 @@ const TypeRacer = ({ gameState }) => {
       <StartBtn player={player} gameID={_id} />
       <CopyCode player={player} gameID={_id} isOpen={isOpen} />
       <ScoreBoard players={players}/>
+      <Footer/>
     </div>
     </div>
   );

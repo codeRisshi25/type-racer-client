@@ -85,8 +85,8 @@ const Navbar = () => {
           <p className="heading-text">nerdtype</p>
           <div className="nav-right">
             <p className="sub-heading-text" ><Link to="/" style={navLinkStyle}>home</Link></p>
-            <p className="sub-heading-text">about</p>
-            <p className="sub-heading-text">contact</p>
+            <p className="sub-heading-text"><a href="https://risshi.is-a.dev" target="_blank" rel="noopener noreferrer" style={navLinkStyle}>about</a></p>
+            <p className="sub-heading-text"><a href="https://www.linkedin.com/in/risshi-is-a-dev/" target="_blank" rel="noopener noreferrer" style={navLinkStyle}>contact</a></p>
           </div>
         </div>
         <div className="nav-mid"></div>

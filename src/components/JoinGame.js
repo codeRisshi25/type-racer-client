@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import NavBar from "./NavBar";
+import Footer from "./Footer";
 import socket from "../socketConfig";
 import "../styles/GameLobby.css"
 
@@ -49,6 +50,7 @@ const JoinGame = (props) => {
               </button>
             </form>
           </div>
+          <Footer />
         </div>
       </div>
     </>

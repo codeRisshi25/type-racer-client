@@ -1,11 +1,16 @@
 import React from "react";
-import {Link} from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
-    const navLinkStyle = {
-        textDecoration: 'none',
-        color: 'inherit' // Optional: to inherit the color from the parent
-      }    
+  const navLinkStyle = {
+    textDecoration: "none",
+    color: "inherit", // Optional: to inherit the color from the parent
+  };
+  const navigate = useNavigate();
+  const handleHomeClick = (e) => {
+    e.preventDefault();
+    navigate("/");
+  };
   return (
     <div className="nav-bg">
       <nav className="nav-bar">
@@ -84,13 +89,44 @@ const Navbar = () => {
           </svg>
           <p className="heading-text">nerdtype</p>
           <div className="nav-right">
-            <p className="sub-heading-text" ><Link to="/" style={navLinkStyle}>home</Link></p>
-            <p className="sub-heading-text"><a href="https://risshi.is-a.dev" target="_blank" rel="noopener noreferrer" style={navLinkStyle}>about</a></p>
-            <p className="sub-heading-text"><a href="https://www.linkedin.com/in/risshi-is-a-dev/" target="_blank" rel="noopener noreferrer" style={navLinkStyle}>contact</a></p>
+            <p className="sub-heading-text">
+              <a href="/" style={navLinkStyle} onClick={handleHomeClick}>
+                home
+              </a>
+            </p>
+            <p className="sub-heading-text">
+              <a
+                href="https://risshi.is-a.dev"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={navLinkStyle}
+              >
+                about
+              </a>
+            </p>
+            <p className="sub-heading-text">
+              <a
+                href="https://www.linkedin.com/in/risshi-is-a-dev/"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={navLinkStyle}
+              >
+                contact
+              </a>
+            </p>
           </div>
         </div>
         <div className="nav-mid"></div>
-        <p className="sub-heading-text"><a href="https://github.com/codeRisshi25" target="_blank" rel="noopener noreferrer" style={navLinkStyle}>@codeRisshi25</a></p>
+        <p className="sub-heading-text">
+          <a
+            href="https://github.com/codeRisshi25"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={navLinkStyle}
+          >
+            @codeRisshi25
+          </a>
+        </p>
       </nav>
     </div>
   );

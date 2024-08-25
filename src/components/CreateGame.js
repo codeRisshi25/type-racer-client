@@ -36,6 +36,7 @@ const CreateGame = (props) => {
                   onChange={onChange}
                   placeholder="Nick Name"
                   className="form-control"
+                  required
                 />
               </div>
               {loading ? (

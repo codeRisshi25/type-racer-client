@@ -22,13 +22,16 @@ const Form = ({isOpen, isOver, gameID}) => {
     if (lastChar === " ") {
       socket.emit("userInput", { userInput, gameID });
       resetForm();
-    } else {
+    } else if (/^[a-zA-Z]$/.test(lastChar)) {
       setUserInput(e.target.value);
     }
   };
+  const onSubmit = (e) => {
+    e.preventDefault();
+  };
   return (
     <div className="text-here">
-      <form>
+      <form onSubmit={onSubmit}>
         <div className="form-group">
           <input
             type="text"
